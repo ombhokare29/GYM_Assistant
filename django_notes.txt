@@ -1,0 +1,43 @@
+Lets start
+
+install the django using pip install django
+
+To create a project 
+python manage.py startproject GYM_ASSISTANT
+
+after that to check whether the django is installed properly or not
+python manage.py runserver
+
+To create an app
+python manage.py startapp gymassistant
+
+Above are the basic things to be done while creating any project in django
+
+Now,
+
+whatever app you create you will have to register it first
+so go to your project configurations settings.py and register it over there
+
+example:
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'tracker' --- add other apps when you. create them by separting with comma
+]
+
+create your models in model.py
+
+to creat the database tables:
+
+python manage.py makemigrations
+python manage.pyy migrate
+
+-- this will create the tables
+
+
+now open the admin.py and enable it
+
