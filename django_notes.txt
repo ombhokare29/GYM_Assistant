@@ -37,7 +37,55 @@ python manage.py makemigrations
 python manage.pyy migrate
 
 -- this will create the tables
+tip: always run these two commands when you make any changes in models.py
+Debug Tip: two check what changes are done run: python manage.py showmigrations
 
 
 now open the admin.py and enable it
+import the the class created in models in admin
+and then register it on the admin site 
 
+admin.site.register(GymAttendance)
+
+
+---------------------------------------
+
+now creat the admin user
+
+python manage.py createsuperuser
+
+
+-------------------------------------
+
+now we need to creae a template for Front end
+
+crete a template and add  the FE logic
+
+after that add the in the views.py
+
+create function with the name of html file and inside that render the html page
+
+----------------------------------------
+
+
+now create the urls
+
+got the project's urls.py and import include
+
+after that import the urls from the app i.e 
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('tracker.urls')),
+]
+
+this will import all the urls from you=r app to your project
+
+now go to the apps urls.py
+
+then you need to import path from project urls.py
+ also import the views so the views ca be bind to the urls 
+     path("", views.home, name="home"),
