@@ -50,6 +50,14 @@
                     No 😴
                 </button>
 
+                {% if today_record %}
+                    {% if today_record.went_to_gym %}
+                        <p class="text-success mt-3">You already worked out today 💪</p>
+                    {% else %}
+                        <p class="text-danger mt-3">You skipped gym today</p>
+                    {% endif %}
+                {% endif %}
+
             </form>
 
         </div>
@@ -72,7 +80,7 @@
         <div class="col-md-4">
             <div class="card text-center shadow">
                 <div class="card-body">
-                    <h5>Total Workouts</h5>
+                    <h5>{{ total_workouts }}</h5>
                     <h2>32</h2>
                 </div>
             </div>
